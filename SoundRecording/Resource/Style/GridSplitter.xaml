@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="RepeatButton_color" Color="#39393a" Opacity="0.3"/>
+    <Style TargetType="GridSplitter" >
+        <Setter Property="Background" Value="{DynamicResource RepeatButton_color}"/>
+         
+    </Style>
+</ResourceDictionary>

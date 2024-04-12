@@ -10,21 +10,38 @@
              MinWidth="240" MinHeight="70" Margin="4,4,4,4"
              x:Name="_SoundName"
              >
-    
+
     <UserControl.Resources>
         <SolidColorBrush x:Key="_back" Color="#272727"/>
+        <SolidColorBrush x:Key="_back_select" Color="#373737"/>
         <SolidColorBrush x:Key="_border" Color="#db354b"/>
         <SolidColorBrush x:Key="_text_color_1" Color="#ffffff"/>
-         <SolidColorBrush x:Key="_debug_back" Color="Transparent" Opacity="0.5"/>
+        <SolidColorBrush x:Key="_text_color_2" Color="#767676"/>
+        <SolidColorBrush x:Key="_debug_back" Color="Transparent" Opacity="0.5"/>
     </UserControl.Resources>
-    <Border Background="{DynamicResource _back}" CornerRadius="8">
-        <Border x:Name="_border" BorderBrush="{DynamicResource _border}" Margin="5,10,0,10">
+    <Border Name="_border_back"  CornerRadius="8">
+        <Border.Style>
+            <Style TargetType="Border">
+
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Select , ElementName=_SoundName}" Value="False">
+                        <Setter Property="Background" Value="{DynamicResource _back}" />
+
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding Select , ElementName=_SoundName}" Value="True">
+                        <Setter Property="Background" Value="{DynamicResource _back_select}" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
+        <Border x:Name="_border" BorderBrush="{DynamicResource _border}" Margin="2,10,0,10">
             <Border.Style>
                 <Style TargetType="Border">
-                    
+
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Select , ElementName=_SoundName}" Value="False">
                             <Setter Property="BorderThickness" Value="0" />
+
                         </DataTrigger>
                         <DataTrigger Binding="{Binding Select , ElementName=_SoundName}" Value="True">
                             <Setter Property="BorderThickness" Value="3,0,0,0" />
@@ -40,15 +57,17 @@
                        />
                 <Grid >
                     <Label Content="{Binding StringDateTime , ElementName=_SoundName}" 
-Foreground="{DynamicResource _text_color_1}"
+Foreground="{DynamicResource _text_color_2}"
 FontSize="12" 
- Background="{DynamicResource _debug_back}"
+Background="{DynamicResource _debug_back}"
+                           Margin="0" Padding="0"
 />
 
                     <Label Content="{Binding Time , ElementName=_SoundName}" 
-Foreground="{DynamicResource _text_color_1}"
-FontSize="12" 
+Foreground="{DynamicResource _text_color_2}"
+FontSize="12" Margin="0,0,5,0"
  Background="{DynamicResource _debug_back}"
+                           Padding="0"
                            HorizontalAlignment="Right"
 />
                 </Grid>

@@ -9,6 +9,7 @@
             <ResourceDictionary.MergedDictionaries>
 
                 <ResourceDictionary Source="Resource/Style/ScrollViewer.xaml"/>
+                <ResourceDictionary Source="Resource/Style/GridSplitter.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
