@@ -9,9 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="View\" />
-    <Folder Include="ViewModel\" />
-    <Folder Include="Resource\" />
+    <PackageReference Include="NAudio" Version="1.10.0" />
   </ItemGroup>
 
 </Project>
