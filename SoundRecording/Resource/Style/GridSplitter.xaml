@@ -3,6 +3,5 @@
     <SolidColorBrush x:Key="RepeatButton_color" Color="#39393a" Opacity="0.3"/>
     <Style TargetType="GridSplitter" >
         <Setter Property="Background" Value="{DynamicResource RepeatButton_color}"/>
-         
     </Style>
 </ResourceDictionary>

@@ -5,11 +5,14 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
+    
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
+                
+                <ResourceDictionary Source="Resource/Style/Fonts.xaml"/>
                 <ResourceDictionary Source="Resource/Style/ScrollViewer.xaml"/>
                 <ResourceDictionary Source="Resource/Style/GridSplitter.xaml"/>
+                <ResourceDictionary Source="Resource/Style/Border.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

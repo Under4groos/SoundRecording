@@ -45,5 +45,24 @@
 
             </Grid>
         </Grid>
+        <Grid Grid.Row="1" Margin="5">
+            <WrapPanel HorizontalAlignment="Center" >
+                <Border Background="Red" Width="40" Margin="5" Height="40"></Border>
+                <Border Background="Red" Width="40"   Margin="5" Height="40"></Border>
+               
+                
+            </WrapPanel>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Border Style="{DynamicResource base}" MinHeight="40" MinWidth="40">
+                    <Label FontFamily="Segoe Fluent Icons" 
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Content="&#xe713;" 
+                           FontSize="20"
+                           Foreground="White"/>
+                </Border>
+            </StackPanel>
+         
+        </Grid>
     </Grid>
 </UserControl>

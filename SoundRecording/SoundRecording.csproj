@@ -16,4 +16,10 @@
     <Folder Include="View\Controls\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Fonts\Segoe Fluent Icons.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
