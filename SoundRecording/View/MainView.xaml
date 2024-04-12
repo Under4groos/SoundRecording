@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition MinWidth="270" Width="1*"/>
             <ColumnDefinition Width="3"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
@@ -24,10 +24,15 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <local:SoundPanel SoundName="{Binding  Name}"  StringDateTime="{Binding Date , StringFormat={}{0:yy.MM.dd HH:mm}}" />
+                        <local:SoundPanel SoundName="{Binding  Name}"  
+                           StringDateTime="{Binding Date , StringFormat={}{0:yy.MM.dd HH:mm}}" 
+                           Time="{Binding Time , StringFormat={}{0:HH:mm}}"
+                           
+                           />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
+            
         </ScrollViewer>
     </Grid>
 </UserControl>

@@ -13,6 +13,10 @@ namespace SoundRecording.View
             this.DataContext = viewModel_MainView;
 
             this.Loaded += MainView_Loaded;
+
+
+
+
         }
 
         private void MainView_Loaded(object sender, System.Windows.RoutedEventArgs e)
@@ -23,6 +27,7 @@ namespace SoundRecording.View
                 {
                     Name = i.ToString(),
                     Date = DateTime.Now,
+                    Time = DateTime.Now,
                 });
             }
         }

@@ -5,6 +5,8 @@ namespace SoundRecording.ViewModel
 {
     public class ViewModel_MainView : ViewModel_Base
     {
+
+
         private ObservableCollection<ModelSound> _Sounds = new ObservableCollection<ModelSound>();
 
         public ObservableCollection<ModelSound> Sounds

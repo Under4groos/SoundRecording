@@ -18,7 +18,20 @@
          <SolidColorBrush x:Key="_debug_back" Color="Transparent" Opacity="0.5"/>
     </UserControl.Resources>
     <Border Background="{DynamicResource _back}" CornerRadius="8">
-        <Border BorderBrush="{DynamicResource _border}" Margin="5,10,0,10" BorderThickness="3,0,0,0">
+        <Border x:Name="_border" BorderBrush="{DynamicResource _border}" Margin="5,10,0,10">
+            <Border.Style>
+                <Style TargetType="Border">
+                    
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Select , ElementName=_SoundName}" Value="False">
+                            <Setter Property="BorderThickness" Value="0" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Select , ElementName=_SoundName}" Value="True">
+                            <Setter Property="BorderThickness" Value="3,0,0,0" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
             <StackPanel Margin="8,0,0,0">
                 <Label Content="{Binding SoundName , ElementName=_SoundName}" 
                        Foreground="{DynamicResource _text_color_1}"
@@ -32,7 +45,7 @@ FontSize="12"
  Background="{DynamicResource _debug_back}"
 />
 
-                    <Label Content="{Binding StringDateTime , ElementName=_SoundName}" 
+                    <Label Content="{Binding Time , ElementName=_SoundName}" 
 Foreground="{DynamicResource _text_color_1}"
 FontSize="12" 
  Background="{DynamicResource _debug_back}"
