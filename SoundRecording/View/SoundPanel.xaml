@@ -15,8 +15,7 @@
         <SolidColorBrush x:Key="_back" Color="#272727"/>
         <SolidColorBrush x:Key="_back_select" Color="#373737"/>
         <SolidColorBrush x:Key="_border" Color="#db354b"/>
-        <SolidColorBrush x:Key="_text_color_1" Color="#ffffff"/>
-        <SolidColorBrush x:Key="_text_color_2" Color="#767676"/>
+    
         <SolidColorBrush x:Key="_debug_back" Color="Transparent" Opacity="0.5"/>
     </UserControl.Resources>
     <Border Name="_border_back"  CornerRadius="8">

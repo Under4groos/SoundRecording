@@ -8,7 +8,6 @@ namespace SoundRecording.ViewModel
 
 
         private ObservableCollection<ModelSound> _Sounds = new ObservableCollection<ModelSound>();
-
         public ObservableCollection<ModelSound> Sounds
         {
             get
@@ -32,8 +31,14 @@ namespace SoundRecording.ViewModel
             {
                 Sounds.Add(modelSound);
             }
-
-
         }
+
+
+
+
+
+
+
+
     }
 }

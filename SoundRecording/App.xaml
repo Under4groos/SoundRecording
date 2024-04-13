@@ -8,11 +8,12 @@
     
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                
+                <ResourceDictionary Source="Resource/Color.xaml"/>
                 <ResourceDictionary Source="Resource/Style/Fonts.xaml"/>
                 <ResourceDictionary Source="Resource/Style/ScrollViewer.xaml"/>
                 <ResourceDictionary Source="Resource/Style/GridSplitter.xaml"/>
                 <ResourceDictionary Source="Resource/Style/Border.xaml"/>
+                <ResourceDictionary Source="Resource/Style/Button.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
