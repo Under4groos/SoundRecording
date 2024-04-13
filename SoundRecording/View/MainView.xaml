@@ -20,25 +20,58 @@
             <GridSplitter Grid.Column="1"   ShowsPreview="False" Width="3"
 				  HorizontalAlignment="Center" 
 				  VerticalAlignment="Stretch" />
-            <Grid Grid.Column="0">
-                <ScrollViewer>
-                    <ItemsControl ItemsSource="{Binding Sounds}">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel/>
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <local:SoundPanel SoundName="{Binding  Name}"  
-            StringDateTime="{Binding Date , StringFormat={}{0:yy.MM.dd HH:mm}}" 
-            Time="{Binding Time , StringFormat={}{0:HH:mm}}"
             
-            />
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </ScrollViewer>
+            <Grid Grid.Column="0">
+                <TabControl >
+                    <TabItem  >
+                        <TabItem.Header>Files</TabItem.Header>
+
+                        <ScrollViewer>
+                            <ItemsControl ItemsSource="{Binding Sounds}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <local:SoundPanel SoundName="{Binding  Name}"  
+StringDateTime="{Binding Date , StringFormat={}{0:yy.MM.dd HH:mm}}" 
+Time="{Binding Time , StringFormat={}{0:HH:mm}}"
+
+/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+                    </TabItem>
+                    <TabItem>
+                        <TabItem.Header>MMDevice</TabItem.Header>
+                        <ScrollViewer>
+                          
+                            <Grid>
+                                <Border PreviewMouseLeftButtonDown="Border_PreviewMouseLeftButtonDown" VerticalAlignment="Top" Style="{DynamicResource base}">
+                                    <Label Foreground="White" HorizontalContentAlignment="Center" Content="Refresh"/>
+                                </Border>
+                                <Grid>
+                                    <ItemsControl ItemsSource="{Binding Devices}" Margin="0,31,0,0">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <local:MMDeviceControl Margin="0,0,0,3" MMDevice="{Binding}" MMDeviceName="{Binding FriendlyName}" />
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </Grid>
+                            </Grid>
+                        </ScrollViewer>
+                    </TabItem>
+                </TabControl>
+               
             </Grid>
 
             <Grid Grid.Column="2" Margin="5" Background="Green">
@@ -47,7 +80,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Stretch">
-                <Border Margin="5" Style="{DynamicResource border_recoord}" 
+                <Border PreviewMouseLeftButtonDown="EventRecord" Margin="5" Style="{DynamicResource border_recoord}" 
                         
                         CornerRadius="50" Height="60" Width="60">
                     <Label FontFamily="Segoe Fluent Icons" 

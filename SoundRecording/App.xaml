@@ -14,6 +14,7 @@
                 <ResourceDictionary Source="Resource/Style/GridSplitter.xaml"/>
                 <ResourceDictionary Source="Resource/Style/Border.xaml"/>
                 <ResourceDictionary Source="Resource/Style/Button.xaml"/>
+                <ResourceDictionary Source="Resource/Style/TabControl.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
