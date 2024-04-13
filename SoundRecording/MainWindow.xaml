@@ -8,7 +8,7 @@
         Background="#202020"
         Title="MainWindow" Height="600" Width="1200" 
         BorderThickness="0" 
-        BorderBrush="#202020" Icon="/cog.png">
+        BorderBrush="#202020" Icon="/Безымянный-1.png">
     <Window.Style>
         <Style TargetType="{x:Type Window}">
             <Setter Property="WindowChrome.WindowChrome">
@@ -37,6 +37,9 @@ BorderThickness="5,30,5,8">
                             </Border>
                             <Grid VerticalAlignment="Top" Height="30" WindowChrome.IsHitTestVisibleInChrome="True">
                                 <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal"  >
+                                    <Button  Click="CloseClick" Width="40" Style="{StaticResource base_button}"   Content="&#xe713;"  Foreground="White" FontFamily="Segoe MDL2 Assets" 
+FontSize="14" Padding="15,10"   />
+                                    
                                     <Button Click="MinimizeClick" Width="40"  Style="{StaticResource base_button}"  Content="&#xE949;" Foreground="White" FontFamily="Segoe MDL2 Assets" 
                FontSize="10" Padding="15,15,15,5"   />
 

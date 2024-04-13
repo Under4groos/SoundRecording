@@ -9,7 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="cog.png" />
+    <None Remove="rec-button.png" />
+    <None Remove="Безымянный-1.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,7 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="cog.png" />
+    <Resource Include="rec-button.png" />
+    <Resource Include="Безымянный-1.png" />
   </ItemGroup>
 
   <ItemGroup>
