@@ -9,11 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="cog.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NAudio" Version="1.10.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="View\Controls\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="cog.png" />
   </ItemGroup>
 
   <ItemGroup>
